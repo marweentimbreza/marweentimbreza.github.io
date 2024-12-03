@@ -1,4 +1,76 @@
-img {
-    resize: both;
-    overflow: auto;
+body {
+  font-family: 'Press Start 2P', cursive; /* Retro Pixel Font */
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.animated-text {
+  font-size: 1.5rem;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+.construction-scene {
+  position: relative;
+  margin-top: 20px;
+}
+
+.worker {
+  width: 50px;
+  height: 50px;
+  background-color: #ffcc00;
+  border: 2px solid #000;
+  border-radius: 10%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.torch {
+  width: 8px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sparks {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.spark {
+  width: 5px;
+  height: 5px;
+  background-color: #ff9900;
+  position: absolute;
+  animation: sparkle 0.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: translate(-10px, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(10px, -20px);
+    opacity: 0;
+  }
 }
